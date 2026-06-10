@@ -1,19 +1,16 @@
 // Recuepramos el boton
-const btn = document.querySelector("btn");
-
-// Le añadimos un escuchador evevnt eventos
+const btn = document.querySelector("#btn");
+// Le añadimos un escuchador de eventos
 btn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
+  document.body.classList.toggle("dark");
 });
 
-//
-
 // Recupero el input y el h2
-const myInput = document.querySelector("myInput")
-const h2 = document.querySelector("h2")
+const myInput = document.querySelector("#myInput");
+const h2 = document.querySelector("h2");
 
 myInput.addEventListener("input", (event) => {
-    h2.textContent = event.target.value
+    h2.textContent = event.target.value;
 });
 
 //
@@ -24,7 +21,7 @@ window.addEventListener("scroll", (ev) => {
 })
 // Le vamos a añadir un evento resize a la ventana
 window.addEventListener("resize", (ev) => {  
-    h2.textContent = event.currentTarget.innerHeight + " x " + ev.currentTarget.innerWidht
+    h2.textContent = ev.currentTarget.innerHeight + " x " + ev.currentTarget.innerWidth;
 })  
 
 //Vamos a añadir un evento que se lance cuando todo el html, css y js se cargue por completo en el DOM

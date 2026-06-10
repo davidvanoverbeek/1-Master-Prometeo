@@ -245,4 +245,4 @@ for (const pokemon of pokemons) {
     `;
   //Añadimos cada uno de los li al container
   container.appendChild(li);
-}
+};
