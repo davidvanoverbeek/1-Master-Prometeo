@@ -1,7 +1,5 @@
 import './style.css'
-import {movies as peliculas, shows as series, hello as hola} from './data.js'
+import { movies, shows } from './data.js'
 
-console.log(peliculas);
-console.log(series);
-hola();
-
+console.log(movies);
+console.log(shows);
