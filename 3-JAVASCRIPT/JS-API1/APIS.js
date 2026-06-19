@@ -13,7 +13,7 @@ const getCharacters = async () => {
 getCharacters()*/
 
 const API_KEY = "69902c6c30a342d6b7e163258241906";
-const getWeather = async () => {
+const getWeather = async (city) => {
     const res = await fetch (`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`);
     const data = await res.json();
     renderWeather(data);
@@ -22,18 +22,17 @@ const getWeather = async () => {
 const renderWeather = (data) => {
     document.querySelector("#results").innerHTML = `
     <h1>${data.location.name}, ${data.location.country}</h1>
-    <h2>${data.current.temp_c}</h2>
+    <h2>${data.current.temp_c}º</h2>
     <p>${data.current.condition.text}</p>
     <img src="${data.current.condition.icon}" alt="${data.current.condition.text}"/>
     <p>Feels like: ${data.current.feelslike_c}º</p>
     <p>Humidity: ${data.current.humidity}%</p>
+    <h3>${data.location.localtime.split(" ")}</h3>
     `
 } 
 
 document.addEventListener("DOMContentLoaded", () => {
-    getWeather("Madrid")
     navigator.geolocation.getCurrentPosition((pos) => {
-        console.log(pos.coords.latitude, pos.coords.longitude)
         getWeather(`${pos.coords.latitude},${pos.coords.longitude}`);
     });
 });
