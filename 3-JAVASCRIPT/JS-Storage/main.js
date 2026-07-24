@@ -1,14 +1,14 @@
-/* //AÑADIR 
-localStorage.setItem("theme", "dark")
+//AÑADIR 
+// localStorage.setItem("theme", "dark")
 
 //GET
-console.log(localStorage.getItem("theme"))
+// console.log(localStorage.getItem("theme"))
 
 //ELIMINAR
-localStorage.removeItem("theme")
+// localStorage.removeItem("theme")
 
 //CLEAR
-localStorage.clear(); */
+// localStorage.clear();
 
 const themeBtn = document.querySelector("#themeBtn");
 

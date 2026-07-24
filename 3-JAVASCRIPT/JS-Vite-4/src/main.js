@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 import { Header, Main, Footer } from "./components";
 import addListeners from "./utils/listeners";
 
